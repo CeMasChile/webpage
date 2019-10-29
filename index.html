@@ -1,61 +1,121 @@
 ---
-layout: default
+layout: main-page
 title: Home
 ---
 
-{% if page.url == "/" %}
+<div id="home-owl" class="owl-carousel owl-theme">
+        <!-- home item -->
+        <div class="home-item">
+            <!-- section background -->
+            <div class="section-bg" style="background-image: url('https://ep00.epimg.net/elpais/imagenes/2019/10/26/album/1572088158_397471_1572088939_album_normal.jpg');"></div>
+            <!-- /section background -->
 
-<!-- Featured
-================================================== -->
-<section class="featured-posts">
-    <div class="section-title">
-        <h2><span>Featured</span></h2>
+            <!-- home content -->
+            <div class="home">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="home-content">
+                                <h1>Contingencia Nacional</h1>
+                                <p class="lead">Queremos contrastar las opiniones de las personas con los medios de información en tiempo real.</p>
+                                <a href="#" class="primary-button">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /home content -->
+        </div>
+        <!-- /home item -->
+
+        <!-- home item -->
+        <div class="home-item">
+            <!-- Background Image -->
+            <div class="section-bg" style="background-image: url('https://ep00.epimg.net/elpais/imagenes/2019/10/26/album/1572088158_397471_1572088756_album_normal.jpg');"></div>
+            <!-- /Background Image -->
+
+            <!-- home content -->
+            <div class="home">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="home-content">
+                                <h1>Necesitamos Ayuda</h1>
+                                <p class="lead">Esta labor no es fácil, y requerimos personas en diversas áreas.</p>
+                                <a href="#" class="primary-button">¡Deseo participar!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /home content -->
+        </div>
+        <!-- /home item -->
     </div>
-    <div class="row">
 
-    {% for post in site.posts %}
+    <div id="about" class="section">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <!-- about content -->
+                    <div class="col-md-5">
+                        <div class="section-title">
+                            <h2 class="title">Bienvenido a CeMAS</h2>
+                            <p class="sub-title">Somos un equipo de académicos, profesionales y estudiantes de diversas áreas, con el objetivo de capturar la contingencia nacional en redes sociales y medios de prensa online, en tiempo real.</p>
+                        </div>
+                        <div class="about-content">
+                            <p>Creemos que la política actual no es eficiente en identificar los problemas sociales en Chile, esto se traduce en mayores índices de malestar en la población. El análisis de la contingencia en tiempo real se basa en entrecruzar las opiniones vía redes sociales, con las noticias en medios de prensa, para medir la efectividad de dichas políticas. De esta forma tenemos un indicador en tiempo real de políticas públicas.</p>
+                            <a href="#" class="primary-button">Acerca del proyecto</a>
+                        </div>
+                    </div>
+                    <!-- /about content -->
+    
+                    <!-- about video -->
+                    <div class="col-md-offset-1 col-md-6">
+                        <div class="section-title text-right">
+                        <h2 class="title">Informaciones</h2>
+                    </div>
+                    <div class="about-content text-right">
+                        <!-- This loops through the paginated posts -->
+                        {% for post in paginator.posts %}
+                        <span><a href="{{ post.url }}">{{ post.title }}</a></span>
+                        <p class="author text-right">
+                        <span class="date">{{ post.date }}</span>
+                        </p>
+                        {% endfor %}
+                        {% if paginator.total_pages > 1 %}
+                        <div class="pagination">
+                            {% if paginator.previous_page %}
+                            <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+                            {% else %}
+                            <span>&laquo; Prev</span>
+                            {% endif %}
+                        
+                            {% for page in (1..paginator.total_pages) %}
+                            {% if page == paginator.page %}
+                                <em>{{ page }}</em>
+                            {% elsif page == 1 %}
+                                <a href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a>
+                            {% else %}
+                                <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+                            {% endif %}
+                            {% endfor %}
+                        
+                            {% if paginator.next_page %}
+                            <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+                            {% else %}
+                            <span>Next &raquo;</span>
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    <!-- /about video -->
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
 
-        {% if post.featured == true %}
 
-            {% include featuredbox.html %}
-
-        {% endif %}
-
-    {% endfor %}
-
-    </div>
-</section>
-
-{% endif %}
-
-<!-- Posts Index
-================================================== -->
-<section class="recent-posts">
-
-    <div class="section-title">
-
-        <h2><span>All Stories</span></h2>
-
-    </div>
-
-    <div class="row listrecent">
-
-        {% for post in paginator.posts %}
-
-        {% include postbox.html %}
-
-        {% endfor %}
-
-    </div>
-
-</section>
-
-<!-- Pagination
-================================================== -->
-<div class="bottompagination">
-<div class="pointerup"><i class="fa fa-caret-up"></i></div>
-<span class="navigation" role="navigation">
-    {% include pagination.html %}
-</span>
-</div>
 

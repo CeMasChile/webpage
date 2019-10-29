@@ -6,9 +6,6 @@ categories: [ Jekyll, tutorial ]
 tags: [red, yellow]
 image: assets/images/11.jpg
 description: "Bievenida al Proyecto"
-featured: true
-hidden: true
-rating: 4.5
 ---
 
 Review products, books, movies, restaurant and anything you like on your Jekyll blog with Mediumish! JSON-LD ready for review property.

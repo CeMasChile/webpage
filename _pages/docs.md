@@ -3,6 +3,7 @@ layout: page
 title: Documentación
 permalink: /docs
 comments: false
+AmarMago: false
 ---
 
 <div class="row justify-content-between">
@@ -23,6 +24,9 @@ def hola(name):
 <p><a href="https://plot.ly">Plot.ly</a></p>
 
 </div>
+{%if page.AmarMago == true %}
+<h1> MAGO CHUPA EL PEDAZO DE PICO </h1>
+{% endif %}
 
 <div class="col-md-4">
 

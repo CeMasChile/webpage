@@ -1,5 +1,5 @@
 ---
 layout: page
-title: Software
-permalink: /software
+title: Dashboard
+permalink: /dashboard
 ---

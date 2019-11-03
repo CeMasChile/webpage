@@ -63,20 +63,6 @@ section.recent-posts {
     margin-bottom: 0;
 }
 
-.section-title h2 {
-    border-bottom: 1px solid rgba(0, 0, 0, .125);
-    margin-bottom: 25px;
-    font-weight: 700;
-    font-size: 1.4rem;
-    margin-bottom: 27px;
-}
-
-.section-title span {
-    border-bottom: 1px solid rgba(0, 0, 0, .44);
-    display: inline-block;
-    padding-bottom: 20px;
-    margin-bottom: -1px;
-}
 
 .article-post ol,
 .article-post ul {
@@ -1080,6 +1066,80 @@ iframe {
     opacity: 1;
   }
   
+
+  
+  /*=========================================================
+	OWL THEME
+===========================================================*/
+
+/*----------------------------*\
+	owl nav
+\*----------------------------*/
+
+.owl-theme .owl-nav [class*='owl-'] {
+    color: #FFF;
+    background: transparent;
+    padding: 0px;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    font-size: 26px;
+    margin: 0;
+    border-radius: 50%;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+  }
+  
+  .owl-theme .owl-nav [class*='owl-']:hover {
+    background: #00ab6b;
+  }
+  
+  /*----------------------------*\
+      owl dots
+  \*----------------------------*/
+  
+  .owl-theme .owl-dots .owl-dot span {
+    border: 1px solid #FFF;
+    background: transparent;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+  
+  .owl-theme .owl-dots .owl-dot:hover span {
+    border-color: #00ab6b;
+    background: #00ab6b;
+  }
+  
+  .owl-theme .owl-dots .owl-dot.active span {
+    width: 20px;
+    border-color: #00ab6b;
+    background: #00ab6b;
+  }
+  
+  .footer-social li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .footer-social li a {
+    display: block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    color: #5f646b;
+    text-align: center;
+    background-color: #FFF;
+    border: 1px solid #e6e6ea;
+    -webkit-transition: 0.3s border-color;
+    transition: 0.3s border-color;
+  }
+  
+  .footer-social li a:hover, .footer-social li a:focus {
+    border-color: #00ab6b;
+    color: #00ab6b;
+  }
+
   /*=========================================================
 	ABOUT
 ===========================================================*/
@@ -1134,12 +1194,12 @@ iframe {
     border-radius: 50%;
     font-size: 26px;
   }
-  
+
   /*=========================================================
-      NUMBERS
-  ===========================================================*/
-  
-  .number {
+	NUMBERS
+===========================================================*/
+
+.number {
     text-align: center;
     padding: 30px;
     margin-bottom: 30px;
@@ -1151,7 +1211,7 @@ iframe {
   
   .number i {
     font-size: 43px;
-    color: #83ba09;
+    color: #00ab6b;
     margin-bottom: 15px;
   }
   
@@ -1160,11 +1220,51 @@ iframe {
   }
   
   .number span {
-    color: #83ba09;
+    color: #00ab6b;
     font-weight: 700;
   }
   
   .number:hover {
-    border-color: #83ba09;
+    border-color: #00ab6b;
   }
   
+  /*=========================================================
+	CALL TO ACTION
+===========================================================*/
+
+#cta.section {
+    padding: 90px 0px;
+  }
+  
+  .cta-content h1 {
+    color: #FFF;
+    font-size: 55px;
+  }
+  
+  .cta-content p.lead {
+    color: #FFF;
+  }
+  
+    /*=========================================================
+	ABOUT PAGE
+===========================================================*/
+
+  .social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+  }
+  
+  .social-link:hover,
+  .social-link:focus {
+    background: #ddd;
+    text-decoration: none;
+    color: #555;
+  }

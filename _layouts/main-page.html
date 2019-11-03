@@ -11,13 +11,13 @@
 {% seo %}
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-<link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet">
-
-<link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
-<link href="{{ site.baseurl }}/assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/assets/fa/css/all.css" rel="stylesheet"> <!--load all styles -->
 <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/assets/css/owl.carousel.css" />
 <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/assets/css/owl.theme.default.css" />
+<link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
+
+
 
 
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
@@ -75,14 +75,18 @@ ga('send', 'pageview');
                     <a class="nav-link" href="{{ site.baseurl }}/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ site.baseurl }}/docs">Documentación</a>
+                    <a class="nav-link" href="{{ site.baseurl }}/about">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="{{ site.baseurl }}/contacto">Contacto</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="{{ site.baseurl }}/method">Metodología</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ site.baseurl }}/dashboard">Dashboard</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ site.baseurl }}/contacto">Contacto</a>
-                </li>
+                
             </ul>
 
         <!-- End Menu -->
@@ -101,16 +105,16 @@ ga('send', 'pageview');
 </div>
 
 
-<!-- {% if site.mailchimp-list %}
- Bottom Alert Bar
-================================================== 
+{% if site.mailchimp-list %}
+<!-- Bottom Alert Bar
+================================================== -->
 <div class="alertbar">
 	<div class="container text-center">
-		<span><img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{site.title}}"> &nbsp; Never miss a <b>story</b> from us, subscribe to our newsletter</span>
+		<span><img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{site.title}}"> &nbsp; ¿Quieres estar atento a nuestras actualizaciones? <b>Subscríbete</b> para que te notifiquemos.</span>
         <form action="{{site.mailchimp-list}}" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate" target="_blank" novalidate>
             <div class="mc-field-group">
             <input type="email" placeholder="Email" name="EMAIL" class="required email" id="mce-EMAIL" autocomplete="on" required>
-            <input type="submit" value="Subscribe" name="subscribe" class="heart">
+            <input type="submit" value="Subscribete" name="subscribe" class="heart">
             </div>
         </form>
 	</div>
@@ -118,12 +122,23 @@ ga('send', 'pageview');
 {% endif %}
     
 </div>
--->
+
 
 <!-- Begin Footer
 ================================================== -->
 <footer class="footer">
     <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">    
+                <ul class="footer-social">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                </ul>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-6 col-sm-6 text-center text-lg-left">
                 Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
